@@ -6,12 +6,10 @@ Name: Ozioma Okonicha
 Group: B18-SE02  
 Lab 1&2
 
-![]()
-
 ### Built With
 
-* Django python framework
-
+* Django python framework  
+I chose to use this framework honestly because I have never used it before and was eager to explore it for the first time. Moreover, it enables rapid development of secure and maintainable websites. Also, there are good debugging tools, logging is already set up, and there's a server that automatically restarts with file changes.
 
 
 ## Getting Started
@@ -34,19 +32,15 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/Ozziekins/devops.git
+   git clone https://github.com/github_username/repo_name.git
    ```
-2. Enter the devops folder and create the virtual environment
+2. Create the virtual environment
    ```sh
-   cd devops
-   
    python3 -m venv my_env
    ```
 3. Enter the working directory
    ```sh
    cd app_python
-
-   cd python_app
    ```
 4. Activate the virtual environment
    ```sh
@@ -73,9 +67,10 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ## Contact
 
-Telegram: [@Ozzie_kins](o.okonicha@innopolis.university)
+Email: [innopolis email](mailto:o.okonicha@innopolis.university)  
 
-Project Link: [Github](https://github.com/Ozziekins/devops.git)
+Project Link: [https://github.com/Ozziekins/devops](https://github.com/Ozziekins/devops)
+
 
 
 
