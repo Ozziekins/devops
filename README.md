@@ -74,7 +74,7 @@ To get the Docker image up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
+   git clone ttps://github.com/Ozziekins/devops.git
    ```
 2. Enter the working directory
    ```sh

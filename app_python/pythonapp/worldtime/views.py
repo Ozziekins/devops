@@ -11,9 +11,9 @@ def index(request):
 
     # context = {'datetime' : r['datetime']}
 
-    tz_MSCW = pytz.timezone('Europe/Moscow') 
-    datetime_MSCW = datetime.now(tz_MSCW)
+    timezone_moscow = pytz.timezone('Europe/Moscow') 
+    datetime_moscow = datetime.now(timezone_moscow)
 
-    context = {'datetime' : datetime_MSCW.strftime("%H:%M:%S")}
+    context = {'datetime' : datetime_moscow.strftime("%H:%M:%S")}
 
     return render(request, 'worldtime/index.html', context)
