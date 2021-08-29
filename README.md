@@ -74,7 +74,7 @@ To get the Docker image up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone ttps://github.com/Ozziekins/devops.git
+   git clone https://github.com/Ozziekins/devops.git
    ```
 2. Enter the working directory
    ```sh
@@ -100,9 +100,12 @@ To get the Docker image up and running follow these simple steps.
    ```
 6. Finally open to view on your browser at http://127.0.0.1:8020/
 
-## Usage
+## Unit tests
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+In order to run the tests, perform the following in the `/devops/app_python/python_app` directory  
+```sh
+   pytest
+```
 
 
 

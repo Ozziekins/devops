@@ -10,7 +10,7 @@ Lab 1
 
 First of all, What is DevOps? It can be seen as an extension of the Agile practice for both Development and IT Operations teams; in order to increase the frequency of deployment, reduce the failure of new releases and achieve faster market time.
 
-After doing some research, some of the best practices of DevOps I came across are as follows:
+After doing some research, some of the best practices of **DevOps** I came across are as follows:
 
 - If something can be automated, do it – that’s the best way to reduce the time spent on that task in the future, at the same time reducing the risk of human error.
 - Keep your infrastructure in a codebase – by doing that, recreation is simpler and you get a good understanding of the infrastructure stack that you create. Moreover, any changes can be checked/audited through commit history
@@ -24,7 +24,7 @@ After doing some research, some of the best practices of DevOps I came across ar
 
 
 
-Some best practices of python programming itself are:
+## Some best practices of python programming itself are:
 
 - Create a Code Repository and Implement Version Control
 - Create Readable Documentation
@@ -35,11 +35,26 @@ Some best practices of python programming itself are:
 - Write Readable Code
 - Use Virtual Environments
 - Write Object-Oriented Code
-- What Not to Do while Programming in Python
+
+---
+
+Unit testing is one of the many different types of automated testing. Unit tests exercise very small parts of the application in complete isolation, comparing their actual behavior with the expected behavior.
+
+## Some best practices for Unit testing  
+
+-  Tests Should Be Fast  
+-  Tests Should Be Simple  
+- Test Shouldn’t Duplicate Implementation Logic  
+- Tests Should Be Readable  
+- Tests Should Be Deterministic  
+- Make Sure They’re Part of the Build Process  
+- Distinguish Between The Many Types of Test Doubles and Use Them Appropriately  
+- Adopt a Sound Naming Convention for Your Tests 
+- Don’t Couple Your Tests With Implementation Details  
 
 
 
-## 12-factor*
+### 12-factor*
 I. <u>Codebase</u>  
 	One codebase tracked in revision control, many deploys  
 II. <u>Dependencies</u>  
