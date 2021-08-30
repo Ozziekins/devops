@@ -4,7 +4,9 @@
 
 Name: Ozioma Okonicha  
 Group: B18-SE02  
-Lab 1&2
+Lab 1&2  
+
+[![CI to Docker Hub](https://github.com/Ozziekins/devops/actions/workflows/main.yml/badge.svg)](https://github.com/Ozziekins/devops/actions/workflows/main.yml)
 
 ### Built With
 
@@ -106,7 +108,6 @@ In order to run the tests, perform the following in the `/devops/app_python/pyth
 ```sh
    pytest
 ```
-
 
 
 ## Contact

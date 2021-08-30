@@ -1,0 +1,23 @@
+
+pipeline {
+    agent { 
+        docker { 
+            image 'python:3.9-alpine' 
+        } 
+    
+    }
+
+    stages {
+        stage('Requirements') {
+            steps {
+                sh 'pip3 install -r app_python/requirements.txt'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'pytest'
+            }
+        }
+    }
+}
