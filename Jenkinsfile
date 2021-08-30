@@ -6,10 +6,15 @@ pipeline {
     }
 
     stages {
-        stage('Change directory') {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Changing directory') {
             steps {
                 echo 'Changing directory...'
-                checkout scm
                 sh 'cd app_python/'
             }
         }
