@@ -8,18 +8,28 @@ pipeline {
     stages {
         stage('Change directory') {
             steps {
+                echo 'Changing directory...'
                 sh 'cd app_python/'
             }
         }
 
         stage('Requirements') {
             steps {
+                echo 'Installing requirements...'
                 sh 'pip3 install -r app_python/requirements.txt'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building...'
+                sh 'python3 manage.py runserver'
             }
         }
 
         stage('Test') {
             steps {
+                echo 'Testing...'
                 sh 'pytest'
             }
         }
