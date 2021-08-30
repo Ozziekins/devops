@@ -9,6 +9,7 @@ pipeline {
         stage('Change directory') {
             steps {
                 echo 'Changing directory...'
+                checkout scm
                 sh 'cd app_python/'
             }
         }
