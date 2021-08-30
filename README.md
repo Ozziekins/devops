@@ -3,7 +3,7 @@
 ### About The Project
 
 Name: Ozioma Okonicha  
-Group: B18-SE02  
+Group: B18-SE01  
 Lab 1&2  
 
 [![CI to Docker Hub](https://github.com/Ozziekins/devops/actions/workflows/main.yml/badge.svg)](https://github.com/Ozziekins/devops/actions/workflows/main.yml)
