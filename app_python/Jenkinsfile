@@ -8,6 +8,12 @@ pipeline {
     }
 
     stages {
+        stage('Change directory') {
+            steps {
+                sh 'cd app_python/'
+            }
+        }
+
         stage('Requirements') {
             steps {
                 sh 'pip3 install -r app_python/requirements.txt'
