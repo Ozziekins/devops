@@ -13,13 +13,6 @@ pipeline {
             }
         }
 
-        stage('Changing directory') {
-            steps {
-                echo 'Changing directory...'
-                sh 'cd app_python/'
-            }
-        }
-
         stage('Requirements') {
             steps {
                 echo 'Installing requirements...'
@@ -36,8 +29,10 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'cd app_python/pythonapp/'
-                sh 'pytest worldtime/tests.py'
+                sh '''
+                    cd app_python/pythonapp/
+                    pytest worldtime/tests.py
+                '''
             }
         }
     }
