@@ -3,7 +3,7 @@ pipeline {
         docker { 
             image 'python:3.9-alpine3.14' 
             // args '-u 0 -v $HOME/.cache:/root/.cache -v /var/run/docker.sock:/var/run/docker.sock'
-            args '-v /var/run/docker.sock:/var/run/docker.sock -u root:root --network host'
+            args '-v /var/run/docker.sock:/var/run/docker.sock -u 0 --network host'
         } 
     }
 
