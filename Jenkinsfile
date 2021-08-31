@@ -37,7 +37,7 @@ pipeline {
             steps {
                 echo 'Testing...'
                 sh 'cd app_python/pythonapp/'
-                sh 'pytest'
+                sh 'pytest worldtime/tests.py'
             }
         }
     }
