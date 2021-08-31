@@ -2,3 +2,6 @@ Django
 requests
 gunicorn
 pytest
+freezegun
+datetime
+pytz
