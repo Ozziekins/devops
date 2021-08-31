@@ -30,7 +30,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'cd pythonapp'
+                sh 'cd pythonapp/'
                 sh 'pytest'
             }
         }
