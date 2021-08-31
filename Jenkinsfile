@@ -27,6 +27,12 @@ pipeline {
             }
         }
 
+        stage('List entries') {
+            steps {
+                sh 'ls'
+            }
+        }
+
         stage('Test') {
             steps {
                 echo 'Testing...'
