@@ -1,42 +1,25 @@
 pipeline {
-    agent { 
-        docker { 
-            image 'python:3.9-alpine3.14' 
-        } 
-    }
-
+    agent { docker { image 'python:3.9-slim' } }
     stages {
-        stage('Checkout') {
+        stage('deps') {
             steps {
-                checkout scm
+                sh '''
+                    python -m pip install --upgrade pipenv wheel
+                    cd app_python
+                    pipenv install --deploy --dev
+                '''
             }
         }
-
-        stage('Changing directory') {
+        stage('main') {
             steps {
-                echo 'Changing directory...'
-                sh 'cd app_python/'
-            }
-        }
-
-        stage('Requirements') {
-            steps {
-                echo 'Installing requirements...'
-                sh 'pip3 install -r app_python/requirements.txt'
-            }
-        }
-
-        stage('Build') {
-            steps {
-                echo 'Building...'
-                sh 'python3 manage.py runserver'
-            }
-        }
-
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-                sh 'pytest'
+                parallel (
+                    'linting': {
+                        sh 'pipenv run lint'
+                    }, 
+                    'testing': {
+                        sh 'pipenv run test'
+                    }
+                )
             }
         }
     }
