@@ -1,3 +1,5 @@
 .pytest_cache
 jenkins
 **/__pycache__
+terraform.tfvars
+.terraform
