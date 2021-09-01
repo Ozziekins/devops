@@ -29,10 +29,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh '''
-                    cd app_python/pythonapp/
-                    pytest worldtime/tests.py
-                '''
+                sh 'cd app_python/pythonapp/ && pytest'
             }
         }
     }
