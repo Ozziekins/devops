@@ -3,3 +3,4 @@ jenkins
 **/__pycache__
 terraform.tfvars
 .terraform
+devops.pem

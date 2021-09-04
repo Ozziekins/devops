@@ -1,0 +1,5 @@
+---
+- name: Docker Nodes
+  hosts: docker-nodes
+  roles:
+    - docker-role
