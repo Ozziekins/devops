@@ -22,3 +22,7 @@ resource "aws_instance" "instance1" {
     Name = "ubuntu-20.04"
   }
 }
+
+output "url_server" {
+  value = "http://${aws_instance.instance1.public_dns}"
+}
