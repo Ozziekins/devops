@@ -56,6 +56,15 @@ resource "aws_security_group" "allow-rules" {
     cidr_blocks = ["0.0.0.0/0"]
     ipv6_cidr_blocks = ["::/0"]
   }
+
+  ingress {
+    description = "HTTP"
+    from_port   = 8020
+    to_port     = 8020
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+    ipv6_cidr_blocks = ["::/0"]
+  }
   
   ingress {
     description = "HTTPS"
