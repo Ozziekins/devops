@@ -1,6 +1,6 @@
 .pytest_cache
 jenkins
 **/__pycache__
-terraform.tfvars
 .terraform
+terraform/aws/terraform.*
 devops.pem
