@@ -4,3 +4,4 @@ jenkins
 .terraform
 terraform/aws/terraform.*
 devops.pem
+ansible/production

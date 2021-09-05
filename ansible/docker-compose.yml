@@ -3,10 +3,6 @@ version: '2.2'
 services:
   app_python:
     image: ozziekins/django-pythonapp:latest
-    build: ../../app_python
     ports:
       - 8020:8020
-    volumes:
-      # - .:/opt/app/
-      - ../../app_python:/opt/app/
 
