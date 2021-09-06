@@ -4,4 +4,4 @@ create_role:
 	@ansible-galaxy init $(role) --init-path=./roles
 
 run_playbook:
-	@ansible-playbook -i production site.yml -vvv
+	@ansible-playbook -i inventory/aws_ec2.yaml site.yml -u ubuntu -vvv
