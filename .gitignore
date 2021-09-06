@@ -5,3 +5,4 @@ jenkins
 terraform/aws/terraform.*
 devops.pem
 ansible/production
+ansible/inventory/awsec2.yml
