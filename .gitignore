@@ -5,4 +5,5 @@ jenkins
 terraform/aws/terraform.*
 devops.pem
 ansible/production
-ansible/inventory/awsec2.yml
+ansible/inventory/aws_ec2.yml
+settings.py
