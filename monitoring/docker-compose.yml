@@ -43,6 +43,7 @@ services:
     image: grafana/grafana:7.2.2
     container_name: grafana
     volumes:
+      - grafanadata:/var/lib/grafana
       - ./config/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
     ports:
       - "3000:3000"
@@ -54,6 +55,7 @@ services:
     container_name: prometheus
     restart: always
     volumes:
+      - promdata:/prometheus
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
       - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
@@ -99,3 +101,7 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
     networks:
       - loki
+
+volumes:
+  promdata: {}
+  grafanadata: {}

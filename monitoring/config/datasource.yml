@@ -1,16 +1,24 @@
-# config file version
 apiVersion: 1
 
 deleteDatasources:
-  - name: Loki
+  - name: Prometheus
+    orgId: 1
+  - name: loki
+    orgId: 1
 
 datasources:
-- name: Loki
+- name: Prometheus
+  type: prometheus
+  access: proxy
+  url: http://prometheus:9090
+  isDefault: true
+  editable: true
+- name: loki
   type: loki
   access: proxy
   orgId: 1
   url: http://loki:3100
   basicAuth: false
-  isDefault: true
+  isDefault: false
   version: 1
-  editable: false
+  editable: true
