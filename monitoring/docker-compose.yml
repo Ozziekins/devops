@@ -1,0 +1,49 @@
+version: "3"
+
+networks:
+  loki:
+
+services:
+  app_python:
+    image: ozziekins/django-pythonapp:latest
+    ports:
+      - 8020:8020
+    logging:
+      driver: "json-file"
+      options: 
+        tag: "{{.ImageName}}|{{.Name}}|{{.ImageFullID}}|{{.FullID}}"
+
+  loki:
+    image: grafana/loki:2.0.0
+    container_name: loki
+    volumes:
+      - ./config/loki.yaml:/etc/config/loki.yaml
+    ports:
+      - "3100:3100"
+    command: -config.file=/etc/loki/local-config.yaml
+    volumes:
+      - ./config/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+    entrypoint:
+      - /usr/bin/loki
+      - -config.file=/etc/config/loki.yaml
+    networks:
+      - loki
+
+  promtail:
+    image: grafana/promtail:1.4.1
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers
+      - /docker-config.yml:/etc/promtail/docker-config.yml
+    command: -config.file=/etc/promtail/docker-config.yml
+    networks:
+      - loki
+
+  grafana:
+    image: grafana/grafana:7.2.2
+    container_name: grafana
+    volumes:
+      - ./config/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yml
+    ports:
+      - "3000:3000"
+    networks:
+      - loki
