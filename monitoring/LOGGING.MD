@@ -32,7 +32,7 @@ For this framework specifically, I found the following best practices:
 - Use ```-print-config-stderr``` or ```-log-config-reverse-order```  
 
 Screenshot:
-![screen](./images/screen.png)  
+https://raw.githubusercontent.com/Ozziekins/devops/main/.github/images/screen.png  
 
 
 ## Lab 8  
@@ -41,12 +41,12 @@ Screenshots:
 
 ```http://localhost:9090/targets```  
 
-![screen2](./images/screen2.png)  
+https://raw.githubusercontent.com/Ozziekins/devops/main/.github/images/screen2.png    
 
 Loki2.0 Global Metrics Dashboard (```https://grafana.com/grafana/dashboards/13407```)  
  
-https://github.com/Ozziekins/devops/blob/main/monitoring/images/screen_record3.mp4
+https://raw.githubusercontent.com/Ozziekins/devops/main/.github/images/screen_record3.mp4  
 
  Prometheus 2.0 Overview Dashbaord (```https://grafana.com/grafana/dashboards/3662```)  
  
-https://github.com/Ozziekins/devops/blob/main/monitoring/images/screen_record4.mp4 
+https://raw.githubusercontent.com/Ozziekins/devops/main/.github/images/screen_record4.mp4  
