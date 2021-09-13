@@ -1,4 +1,4 @@
-version: "3"
+version: "2.4"
 
 networks:
   loki:
@@ -62,6 +62,8 @@ services:
       - ./config/prometheus.yml:/etc/prometheus/prometheus.yml
     command:
       - '--config.file=/etc/prometheus/prometheus.yml'
+      - '-storage.local.path=/prometheus'
+      - '-alertmanager.url=http://alertmanager:9093'
     depends_on:
       - node-exporter
       - cadvisor
@@ -69,6 +71,7 @@ services:
       - promtail
     networks:
       - loki
+    mem_limit: 512M
     logging:
       driver: "json-file"
       options:
