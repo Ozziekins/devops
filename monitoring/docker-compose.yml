@@ -34,8 +34,8 @@ services:
     container_name: promtail
     volumes:
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
-      - ./docker-config.yml:/etc/promtail/docker-config.yml
-    command: -config.file=/etc/promtail/docker-config.yml
+      - ./config/promtail.yml:/etc/promtail/promtail.yml
+    command: -config.file=/etc/promtail/promtail.yml
     networks:
       - loki
 
@@ -51,9 +51,10 @@ services:
       - loki
 
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v2.18.1
     container_name: prometheus
-    restart: always
+    ports:
+      - "9090:9090"
     volumes:
       - promdata:/prometheus
       - /etc/localtime:/etc/localtime:ro
@@ -68,11 +69,16 @@ services:
       - promtail
     networks:
       - loki
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "30m"
+        max-file: "5"
+        tag: "{{.ImageName}}|{{.Name}}"
 
   node-exporter:
     image: prom/node-exporter:latest
     container_name: node-exporter
-    restart: always
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
@@ -91,7 +97,6 @@ services:
   cadvisor:
     image: google/cadvisor:latest
     container_name: cadvisor
-    restart: always
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro

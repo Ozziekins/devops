@@ -1,10 +1,10 @@
-# Best Docker practices
+# Best Logging practices
 
 Name: Ozioma Okonicha
 
 Group: B18-SE01
 
-Lab 7 
+## Lab 7 
 
 Logging..why do we need it anyway? to get an understanding of how your code works, to capture and fix unexpected errors, to analyze and visualize how the app performs. After doing some research, I found the following best practices for logging in general:  
 
@@ -32,4 +32,21 @@ For this framework specifically, I found the following best practices:
 - Use ```-print-config-stderr``` or ```-log-config-reverse-order```  
 
 Screenshot:
-![screen](./images/screen.png)
+![screen](./images/screen.png)  
+
+
+## Lab 8  
+
+Screenshots:  
+
+```http://localhost:9090/targets```  
+
+![screen2](./images/screen2.png)  
+
+Loki2.0 Global Metrics Dashboard (```https://grafana.com/grafana/dashboards/13407```)  
+ 
+ ![screen3](./images/screen_record3.mp4)  
+
+ Prometheus 2.0 Overview Dashbaord (```https://grafana.com/grafana/dashboards/3662```)  
+ 
+ ![screen4](./images/screen_record4.mp4)  

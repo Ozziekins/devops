@@ -3,7 +3,7 @@ apiVersion: 1
 deleteDatasources:
   - name: Prometheus
     orgId: 1
-  - name: loki
+  - name: Loki
     orgId: 1
 
 datasources:
@@ -13,7 +13,7 @@ datasources:
   url: http://prometheus:9090
   isDefault: true
   editable: true
-- name: loki
+- name: Loki
   type: loki
   access: proxy
   orgId: 1
