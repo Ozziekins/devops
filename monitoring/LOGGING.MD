@@ -45,8 +45,8 @@ Screenshots:
 
 Loki2.0 Global Metrics Dashboard (```https://grafana.com/grafana/dashboards/13407```)  
  
- ![screen3](./images/screen_record3.mp4)  
+ ./images/screen_record3.mp4  
 
  Prometheus 2.0 Overview Dashbaord (```https://grafana.com/grafana/dashboards/3662```)  
  
- ![screen4](./images/screen_record4.mp4)  
+./images/screen_record4.mp4  
