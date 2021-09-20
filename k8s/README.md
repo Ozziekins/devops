@@ -90,7 +90,7 @@ service/pythonapp-workflow   LoadBalancer   10.103.233.19   <pending>     8020:3
 # Bonus  
 
 1. Read about `Ingress, Ingress controller, StatefulSet, DaemonSet, PersistentVolumes`, provide the explanation in a nutshell, as you understand it. No copy paste.  
-    Ingress- I understand this as a resource in kubernetes that serves as a manager in the cluster inbetween the service and incoming client http/https requests.  
+    <ins>Ingress</ins>- I understand this as a resource in kubernetes that serves as a manager in the cluster inbetween the service and incoming client http/https requests.  
     Ingress controller- This is to make the ingress actually work.  
     StatefulSet- I understand this as a feature (opposed to regular Deployment) that is used to maintain unique, non-replaceable identifiers for the pods it creates.  
     DaemonSet- Another feature that makes sure that runs copies of the pod you specify on all nodes that are available.  
