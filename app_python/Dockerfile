@@ -12,14 +12,13 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 RUN mkdir -p /opt/app
 RUN mkdir -p /opt/app/pip_cache
 RUN mkdir -p /opt/app/pythonapp
-COPY requirements.txt start-server.sh /opt/app/
+COPY requirements.txt /opt/app/
 # COPY .pip_cache /opt/app/pip_cache/
 COPY pythonapp /opt/app/pythonapp/
-WORKDIR /opt/app
+WORKDIR /opt/app/
 RUN pip install -r requirements.txt --cache-dir /opt/app/pip_cache
 RUN chown -R www-data:www-data /opt/app
 
 # start server
 EXPOSE 8020
-STOPSIGNAL SIGTERM
 CMD ["/opt/app/start-server.sh"]
