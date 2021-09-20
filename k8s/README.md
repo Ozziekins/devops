@@ -85,3 +85,16 @@ service/kubernetes           ClusterIP      10.96.0.1       <none>        443/TC
 service/pythonapp-workflow   LoadBalancer   10.103.233.19   <pending>     8020:30379/TCP   6m4s
 ```
 ![screen4](../.github/images/k8s4.png) 
+
+
+# Bonus  
+
+1. Read about `Ingress, Ingress controller, StatefulSet, DaemonSet, PersistentVolumes`, provide the explanation in a nutshell, as you understand it. No copy paste.  
+    Ingress- I understand this as a resource in kubernetes that serves as a manager in the cluster inbetween the service and incoming client http/https requests.  
+    Ingress controller- This is to make the ingress actually work.  
+    StatefulSet- I understand this as a feature (opposed to regular Deployment) that is used to maintain unique, non-replaceable identifiers for the pods it creates.  
+    DaemonSet- Another feature that makes sure that runs copies of the pod you specify on all nodes that are available.  
+    PersistentVolumes- I see this as a resource that is like regular volumes, but the difference is that they are not dependent on the pods that make use of it. 
+
+2. Read about `Library Charts`, provide the explanation in a nutshell, as you understand it. No copy paste.
+    Library Charts are sort of blueprints for some reusable snippets and similar definitions; they can be shared in other helm charts. 
