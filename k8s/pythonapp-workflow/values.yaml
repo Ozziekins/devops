@@ -9,6 +9,8 @@ image:
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
+  port: 8020
+  workDir: /opt/app/files
 
 imagePullSecrets: []
 nameOverride: ""
