@@ -57,7 +57,7 @@ To get a local copy up and running follow these simple steps.
    ```
 6. Finally run the application and open to view on your browser at http://127.0.0.1:8000/
    ```sh
-   python3 manage.py runserver
+   python3 manage.py runserver 0.0.0.0:8020
    ```
 
 
@@ -99,15 +99,25 @@ To get the Docker image up and running follow these simple steps.
       -e DJANGO_SUPERUSER_PASSWORD=some_password1234 \
       -e DJANGO_SUPERUSER_EMAIL=youremail@gmail.com \
       ozziekins/django-pythonapp
-   ```
-6. Finally open to view on your browser at http://127.0.0.1:8020/
+   ```  
+   or run directly from docker hub    
+   ```sh
+   docker run -it -p 8020:8020 ozziekins/django-pythonapp
+   ```  
+6. Finally open to view on your browser at http://0.0.0.0:8020/  
 
 ## Unit tests
 
 In order to run the tests, perform the following in the `/devops/app_python/python_app` directory  
 ```sh
    pytest
-```
+```  
+
+
+## Lab 12- Endpoints  
+
+- `/`: root path that shows the time in Moscow  
+- `/visits`: shows the time when a client visited the root path
 
 
 ## Contact
