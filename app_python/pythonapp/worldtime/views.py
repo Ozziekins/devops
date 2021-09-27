@@ -15,12 +15,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Create your views here.
 def index(request):
-    # url = "http://worldtimeapi.org/api/timezone/Europe/Moscow"
-
-    # r = requests.get(url).json()
-
-    # context = {'datetime' : r['datetime']}
-
     logger.info('A client visited')
     
     timezone_moscow = pytz.timezone('Europe/Moscow') 
@@ -33,15 +27,10 @@ def index(request):
 
 def visits(request):
 
-    # datetime_now = datetime.now()
+    data_file = open(os.path.join(BASE_DIR / 'logs', 'visits.log'), 'rb')
 
-    # context = {'visitime' : datetime_now.strftime("%H:%M:%S")}
+    data = data_file.readlines()
 
-    short_report = open(os.path.join(BASE_DIR / 'logs', 'visits.log'), 'rb')
-    response = HttpResponse(FileWrapper(short_report), content_type='text/plain')
-
-    # return response
-
-    context = {'visitlog' : short_report}
+    context = {'visitlog' : data}
 
     return render(request, 'worldtime/visits.html', context)

@@ -15,7 +15,9 @@
     <body>
 
         <div class="container">
-            <p class="visit-text"> {{ visitlog }} </p>
+            {% for line in visitlog %}
+            <p class="visit-text"> {{ line }} </p>
+            {% endfor %}
         </div>
     </body>
 
