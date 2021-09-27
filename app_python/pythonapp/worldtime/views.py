@@ -3,8 +3,11 @@ from django.conf import settings
 from django.shortcuts import render
 from datetime import datetime
 import pytz
+import os
 import logging 
+from django.http import HttpResponse
 from pathlib import Path
+from wsgiref.util import FileWrapper
 
 logger = logging.getLogger('visitlogger')
 
@@ -34,11 +37,11 @@ def visits(request):
 
     # context = {'visitime' : datetime_now.strftime("%H:%M:%S")}
 
-    short_report = open(BASE_DIR / 'logs/visits.log', 'rb')
+    short_report = open(os.path.join(BASE_DIR / 'logs', 'visits.log'), 'rb')
     response = HttpResponse(FileWrapper(short_report), content_type='text/plain')
 
     # return response
 
-    context = {'visitlog' : response}
+    context = {'visitlog' : short_report}
 
     return render(request, 'worldtime/visits.html', context)
