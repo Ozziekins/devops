@@ -8,3 +8,4 @@ terraform/aws/devops.pem
 ansible/production
 ansible/inventory/aws_ec2.yml
 app_python/pythonapp/pythonapp/settings.py
+python_app_venv/

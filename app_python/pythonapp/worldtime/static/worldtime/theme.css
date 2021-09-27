@@ -33,6 +33,14 @@ body {
     font-weight: normal;
 }
 
+.visit-text {
+    font-family: Roboto;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: normal;
+}
+
 .time-time {
     font-family: Roboto;
     color: #fff;
