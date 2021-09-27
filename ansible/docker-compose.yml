@@ -5,4 +5,7 @@ services:
     image: ozziekins/django-pythonapp:latest
     ports:
       - 8020:8020
-
+    volumes:
+      - logs:/opt/app/pythonapp/logs
+volumes:
+  logs:
