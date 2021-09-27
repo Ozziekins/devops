@@ -98,11 +98,11 @@ To get the Docker image up and running follow these simple steps.
       -e DJANGO_SUPERUSER_USERNAME=admin \
       -e DJANGO_SUPERUSER_PASSWORD=some_password1234 \
       -e DJANGO_SUPERUSER_EMAIL=youremail@gmail.com \
-      ozziekins/django-pythonapp
+      ozziekins/django-pythonapp:latest
    ```  
    or run directly from docker hub    
    ```sh
-   docker run -it -p 8020:8020 ozziekins/django-pythonapp
+   docker run -it -p 8020:8020 ozziekins/django-pythonapp:latest
    ```  
 6. Finally open to view on your browser at http://0.0.0.0:8020/  
 
