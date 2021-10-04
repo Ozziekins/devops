@@ -10,7 +10,10 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
   port: 8020
-  workDir: /opt/app/main
+
+volumes:
+  visits: opt/app/main
+  wget: opt/app/wget
 
 imagePullSecrets: []
 nameOverride: ""
