@@ -5,12 +5,12 @@
 replicaCount: 3
 
 image:
-  repository: ozziekins/django-pythonapp
+  repository: ozziekins/django-python-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"
   port: 8020
-  workDir: /opt/app/files
+  workDir: /opt/app/main
 
 imagePullSecrets: []
 nameOverride: ""
@@ -39,6 +39,7 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  name: pythonapp-service
   type: LoadBalancer
   port: 8020
   targetPort: 8020
@@ -69,7 +70,20 @@ resources:
     memory: "512Mi"
   requests:
     cpu: "0.5"
-    memory: "128Mi"
+    memory: "512Mi"
+
+statefulSet:
+  podManagementPolicy: "Parallel"
+  volumeClaimTemplates:
+    spec: 
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 512M
+
+configMap:
+  enabled: false
+
 
 autoscaling:
   enabled: false

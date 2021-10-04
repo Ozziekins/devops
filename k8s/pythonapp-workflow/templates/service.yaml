@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "pythonapp-workflow.fullname" . }}
+  name: {{ .Values.service.name }}
   labels:
     {{- include "pythonapp-workflow.labels" . | nindent 4 }}
 spec:
